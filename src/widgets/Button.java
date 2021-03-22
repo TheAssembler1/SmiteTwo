@@ -73,13 +73,15 @@ public class Button implements Renderable{
 	}
 	
 	public boolean isClicked(int mouseButton) {
+		/*
 		if(MouseInput.mouseButtons[mouseButton] != null)
 			if(mouseColliding() && MouseInput.mouseButtons[MouseEvent.BUTTON1].getID() == MouseEvent.MOUSE_CLICKED)
 				return true;
 			else 
 				return false;
 		else
-			return false;
+			return false;*/
+		return false;
 	}
 	
 	public boolean mouseColliding() {
