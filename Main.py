@@ -3,26 +3,19 @@ import Window
 from Renderer import *
 from RenderableObjects import *
 
-
-window = Tk()
-WIDTH = 400
-HEIGHT = 400
-window.geometry("{}x{}".format(WIDTH,HEIGHT))
-window.title("SmiteTwo")
+#GRANT PLZ READ
+#NOTE::I'm using a new lib called PIL from which I import
 
 
-screen = Window.Screen(window)
+screen = Window.Screen()
 
+fileName = 'player.png'
+testObject = RenderableObject(20, 20, 100, 150, fileName)
+Renderer.addRenderableObject(testObject)
 
-RenderableObjects = []
-img = "player.png"
+running = True
 
-obj = RenderableObject(1,2,2,2,img)
-
-r = Renderer.renderer(RenderableObjects)
-
-r.addRenderableObject(obj)
-
-
-
-
+#NOTE::throws an error while exiting but thats ok for now
+while running:
+    Renderer.render(screen)
+    screen.update()

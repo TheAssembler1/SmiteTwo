@@ -7,7 +7,7 @@ Classes:
 
 Inheritance Chain:
 
-Renderer(Canvas) | Updater()
+Renderer(Canvas) | Updater())
 
 Object(Renderer(), Updater())
 RenderObject(Renderer())
@@ -24,7 +24,6 @@ Object(Renderer(), Updater):
  
 RenderObject(Renderer()):
          renderer()
-
 
 Renderer(Canvas):
 	List Renderable Objects
