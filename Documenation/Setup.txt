@@ -1,0 +1,53 @@
+Classes:
+	1. Renderer
+	2. Updater
+	3. Main
+	4. Sound 
+	5. Input
+
+Inheritance Chain:
+
+Renderer(Canvas) | Updater()
+
+Object(Renderer(), Updater())
+RenderObject(Renderer())
+UpdObject(Updater())
+
+
+Entity(Object || RenderObject || UpdObject)
+
+Implementation of Classes:
+
+Object(Renderer(), Updater):
+         update()
+         renderer()
+ 
+RenderObject(Renderer()):
+         renderer()
+
+
+Renderer(Canvas):
+	List Renderable Objects
+	AddRenderableObject(Renderable object)
+	RemoveRenderableObject(Renderable object)
+
+RenderObject(Renderer()):
+	__init__(self)
+		Addrenderobject(self)
+
+
+
+Updater:
+	List Updateable Objects
+	List Updateable newObjects
+	List Updateable Oldobjects
+
+	addUpdateablleObject(Updateable object); newObjects
+	removeUpdateableObject(Updateable object); oldObjects
+	
+
+	Update():
+		for(object in Objects)
+			objects.update
+		Objects.add(newObjects)
+		Objects.remove(oldObjects)
